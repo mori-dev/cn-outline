@@ -22,8 +22,8 @@
 ;;; Setting Sample
 
 ;; (require 'cn-outline)
-;; (cn-outline-mode t)
-;; (global-set-key "\C-c\C-c\C-c" 'cn-outline-mode)
+;; (setq-default cn-outline-mode t)
+;; (global-set-key (kbd "C-c C-c C-c") 'cn-outline-mode)
 
 ;; Change Log
 ;; 1.0.0: 新規作成
@@ -34,7 +34,7 @@
 
 ;;; Code:
 
-;;(global-set-key "\C-c\C-c\C-c" 'cn-outline-mode)
+(global-set-key (kbd "C-c C-c C-c") 'cn-outline-mode)
 
 (defvar cn-outline-mode nil
   "ポイント位置のカラム値を基準に折りたたみ表示するマイナーモード")
@@ -74,7 +74,6 @@
   "折り畳み表示を解除する"
   (interactive)
   (set-selective-display 0))
-
 
 (run-hooks 'cn-outline-mode-hook)
 
