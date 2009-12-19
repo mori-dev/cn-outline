@@ -34,8 +34,6 @@
 
 ;;; Code:
 
-(global-set-key (kbd "C-c C-c C-c") 'cn-outline-mode)
-
 (defvar cn-outline-mode nil
   "ポイント位置のカラム値を基準に折りたたみ表示するマイナーモード")
 (defvar cn-outline-mode-hook nil)
