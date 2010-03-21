@@ -26,6 +26,7 @@
 ;; (global-set-key (kbd "C-c C-c C-c") 'cn-outline-mode)
 
 ;; Change Log
+;; 1.0.1: キーバインドを変更
 ;; 1.0.0: 新規作成
 
 ;;; Commentary:
@@ -55,10 +56,10 @@
     (let ((cn-outline-mode t))
       (cn-clear-folding))))
 
-(defvar cn-outline-mode-key-map
+(setq cn-outline-mode-key-map
   (let ((map (make-sparse-keymap)))
-    (define-key map (kbd "C-c C-c 9") 'cn-fold-at-point)
-    (define-key map (kbd "C-c C-c 0") 'cn-clear-folding)
+    (define-key map (kbd "C-c C-9") 'cn-fold-at-point)    
+    (define-key map (kbd "C-c C-0") 'cn-clear-folding)
     map))
 
 (add-to-list 'minor-mode-map-alist (cons 'cn-outline-mode cn-outline-mode-key-map))
