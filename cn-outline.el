@@ -4,6 +4,7 @@
 
 ;; Author: kitokitoki <morihenotegami@gmail.com>
 ;; Keywords: outliner
+;; Version: 1.0.1
 ;; Prefix: cn-
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -77,4 +78,4 @@
 (run-hooks 'cn-outline-mode-hook)
 
 (provide 'cn-outline)
-;; cn-outline.el ends here
+;;; cn-outline.el ends here
