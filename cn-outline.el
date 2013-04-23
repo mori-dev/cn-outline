@@ -58,6 +58,7 @@
 
 (setq cn-outline-mode-key-map
   (let ((map (make-sparse-keymap)))
+	(define-key map (kbd "C-c C-8") 'cn-toggle-folding)
     (define-key map (kbd "C-c C-9") 'cn-fold-at-point)    
     (define-key map (kbd "C-c C-0") 'cn-clear-folding)
     map))
@@ -73,6 +74,13 @@
   "折り畳み表示を解除する"
   (interactive)
   (set-selective-display 0))
+
+(defun cn-toggle-folding ()
+  "Toggle column-number-base line folding."
+  (interactive)
+  (if (or (null selective-display) (eq selective-display 0))
+      (cn-fold-at-point)
+    (cn-clear-folding)))
 
 (run-hooks 'cn-outline-mode-hook)
 
