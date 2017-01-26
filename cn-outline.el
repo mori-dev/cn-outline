@@ -1,4 +1,4 @@
-;;; cn-outline.el -- minor mode for column-number-base line folding
+;;; cn-outline.el --- minor mode for column-number-base line folding
 
 ;; Copyright (C) 2009,2010  kitokitoki
 
@@ -77,4 +77,4 @@
 (run-hooks 'cn-outline-mode-hook)
 
 (provide 'cn-outline)
-;; cn-outline.el ends here
+;;; cn-outline.el ends here
